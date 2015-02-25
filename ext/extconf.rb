@@ -1,5 +1,7 @@
 require 'mkmf'
 
+puts Dir.glob("**/*", File::FNM_DOTMATCH)
+
 dir_config('proj')
 
 if not find_header('proj_api.h', '/app/.heroku/vendor/include')
