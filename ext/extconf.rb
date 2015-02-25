@@ -2,7 +2,7 @@ require 'mkmf'
 
 dir_config('proj')
 
-if not find_header('proj_api.h', '../../../../../../../../../.heroku/vendor/include')
+if not find_header('proj_api.h', '../../../../../../../../.heroku/vendor/include')
   puts '###############'
   puts 'DEBUG:'
   puts Dir.pwd
