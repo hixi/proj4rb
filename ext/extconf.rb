@@ -3,10 +3,11 @@ require 'mkmf'
 dir_config('proj')
 
 if not find_header('proj_api.h', '/app/.heroku/vendor/include')
-  puts '#####'
-  puts ''
+  puts '###############'
+  puts 'DEBUG:'
+  puts __FILE__
   puts Dir.glob("/**/proj_api.h", File::FNM_DOTMATCH)
-  puts '#####'
+  puts '###############'
   
   raise('Cannot find proj_api.h header')
 end
