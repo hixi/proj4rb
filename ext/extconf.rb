@@ -1,7 +1,8 @@
 require 'mkmf'
 
-Dir.chdir '/'
-puts Dir.glob("**/*", File::FNM_DOTMATCH)
+puts '#####'
+puts Dir.glob("/**/proj_api.h", File::FNM_DOTMATCH)
+puts '#####'
 
 dir_config('proj')
 
