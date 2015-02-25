@@ -2,6 +2,15 @@ require 'mkmf'
 
 dir_config('proj')
 
+HEADER_DIRS = [
+  '../../../../../../../../.heroku/vendor/include'
+]
+LIB_DIRS = [
+  '../../../../../../../../.heroku/vendor/lib'
+]
+dir_config('libs', HEADER_DIRS, LIB_DIRS)
+
+
 if not find_header('proj_api.h', '../../../../../../../../.heroku/vendor/include')
   
   puts '###############'
@@ -15,8 +24,6 @@ if not find_header('proj_api.h', '../../../../../../../../.heroku/vendor/include
 end
 
 have_header('projects.h')
-
-COMMON_LIBS << '../../../../../../../../.heroku/vendor/lib'
 
 unless have_library('proj', 'pj_init') or
        have_library('libproj', 'pj_init')
