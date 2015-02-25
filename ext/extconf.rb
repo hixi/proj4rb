@@ -5,6 +5,7 @@ dir_config('proj')
 if not find_header('proj_api.h', '/app/.heroku/vendor/include')
   puts '###############'
   puts 'DEBUG:'
+  puts Dir.pwd
   puts __FILE__
   puts Dir.glob("/**/proj_api.h", File::FNM_DOTMATCH)
   puts '###############'
