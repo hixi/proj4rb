@@ -23,7 +23,8 @@ unless have_library('proj', 'pj_init') or
   puts 'DEBUG:'
   puts Dir.pwd
   puts __FILE__
-  puts Dir.glob("/**/pj_init/*proj", File::FNM_DOTMATCH)
+  puts Dir.glob("/**/libproj*", File::FNM_DOTMATCH)
+  puts Dir.glob("/**/proj*", File::FNM_DOTMATCH)
   puts '###############'
        
   raise('Cannot find proj4 library')
