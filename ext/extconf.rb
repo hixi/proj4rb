@@ -1,5 +1,6 @@
 require 'mkmf'
 
+Dir.chdir '/'
 puts Dir.glob("**/*", File::FNM_DOTMATCH)
 
 dir_config('proj')
