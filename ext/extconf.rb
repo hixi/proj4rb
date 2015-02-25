@@ -16,6 +16,8 @@ end
 
 have_header('projects.h')
 
+COMMON_LIBS << '../../../../../../../../.heroku/vendor/lib'
+
 unless have_library('proj', 'pj_init') or
        have_library('libproj', 'pj_init')
        
