@@ -2,7 +2,7 @@ require 'mkmf'
 
 dir_config('proj')
 
-if not have_header('proj_api.h')
+if not find_header('proj_api.h', '/app/.heroku/vendor/include')
   raise('Cannot find proj_api.h header')
 end
 
